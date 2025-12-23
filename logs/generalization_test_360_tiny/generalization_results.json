@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-11-21T16:43:20.950438",
+  "results": [
+    {
+      "model_name": "SmolLM2-360M",
+      "dataset_name": "tinystories",
+      "skip_distance": 0,
+      "skip_alpha": 0.0,
+      "val_loss": 3.764641695022583,
+      "val_perplexity": 43.14824285960708,
+      "seed": 42,
+      "config_name": "Baseline"
+    },
+    {
+      "model_name": "SmolLM2-360M",
+      "dataset_name": "tinystories",
+      "skip_distance": 3,
+      "skip_alpha": 0.65,
+      "val_loss": 3.112403588294983,
+      "val_perplexity": 22.475000178390797,
+      "seed": 42,
+      "config_name": "Psychedelic (d=3, \u03b1=0.65)"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# IDEs & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Large Model Weights
+checkpoints/*.npz
+checkpoints/stage1_*/
+checkpoints/stage2_*/
+
+# Data & Cache
+.tokenizers/
+datasets_cache/
+.huggingface/
+
+# Verbose Logs (Keep the JSON/PNG results, ignore raw txt/log dumps)
+*.log
+training_log.txt
+*.txt
+!requirements.txt
+
+# Artifacts & Local Tools
+chat-with-claude.md
+compass_artifact_*
+.claude/
+.gemini/
+.geminiignore

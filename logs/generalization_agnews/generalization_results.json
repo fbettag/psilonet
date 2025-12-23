@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-11-21T19:08:43.466326",
+  "results": [
+    {
+      "model_name": "SmolLM2-135M",
+      "dataset_name": "ag_news",
+      "skip_distance": 0,
+      "skip_alpha": 0.0,
+      "val_loss": 6.3150112915039065,
+      "val_perplexity": 552.8083025934351,
+      "seed": 42,
+      "config_name": "Baseline"
+    },
+    {
+      "model_name": "SmolLM2-135M",
+      "dataset_name": "ag_news",
+      "skip_distance": 3,
+      "skip_alpha": 0.65,
+      "val_loss": 4.524858805338542,
+      "val_perplexity": 92.28289505661587,
+      "seed": 42,
+      "config_name": "Psychedelic (d=3, \u03b1=0.65)"
+    }
+  ]
+}

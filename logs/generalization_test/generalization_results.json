@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-11-21T13:35:55.072959",
+  "results": [
+    {
+      "model_name": "SmolLM2-135M",
+      "dataset_name": "wikitext",
+      "skip_distance": 0,
+      "skip_alpha": 0.0,
+      "val_loss": 7.594249540964762,
+      "val_perplexity": 1986.7383261783298,
+      "seed": 42,
+      "config_name": "Baseline"
+    },
+    {
+      "model_name": "SmolLM2-135M",
+      "dataset_name": "wikitext",
+      "skip_distance": 3,
+      "skip_alpha": 0.65,
+      "val_loss": 2.0780660857756934,
+      "val_perplexity": 7.989003916814235,
+      "seed": 42,
+      "config_name": "Psychedelic (d=3, \u03b1=0.65)"
+    },
+    {
+      "model_name": "SmolLM2-135M",
+      "dataset_name": "tinystories",
+      "skip_distance": 0,
+      "skip_alpha": 0.0,
+      "val_loss": 4.135494612058004,
+      "val_perplexity": 62.520506820729864,
+      "seed": 42,
+      "config_name": "Baseline"
+    },
+    {
+      "model_name": "SmolLM2-135M",
+      "dataset_name": "tinystories",
+      "skip_distance": 3,
+      "skip_alpha": 0.65,
+      "val_loss": 1.941593809525172,
+      "val_perplexity": 6.9698507373248475,
+      "seed": 42,
+      "config_name": "Psychedelic (d=3, \u03b1=0.65)"
+    }
+  ]
+}

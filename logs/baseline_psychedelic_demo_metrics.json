@@ -1,0 +1,22 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 1.6413209187984465,
+    "val_loss": 1.0728645416406484,
+    "train_perplexity": 5.161983571971591,
+    "val_perplexity": 2.9237426985995714,
+    "tokens_per_sec": 5430.348462361419,
+    "timestamp": 20.663729906082153,
+    "step": 1
+  },
+  {
+    "epoch": 2,
+    "train_loss": 1.1749373403191568,
+    "val_loss": 1.0223572964851673,
+    "train_perplexity": 3.237940049191298,
+    "val_perplexity": 2.779739717401166,
+    "tokens_per_sec": 5917.63060620201,
+    "timestamp": 66.19543194770813,
+    "step": 2
+  }
+]
