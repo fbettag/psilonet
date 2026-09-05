@@ -1,22 +1,26 @@
 # 🍄 psilonet: Psilocybin-Inspired Neural Networks
 
-> **Architectural research bridging computational neuroscience and transformer efficiency.**  
-> *Developed by [Franz Bettag](https://github.com/fbettag) on Apple Silicon using MLX.*
+> **Exploratory transformer skip-connection experiments in MLX.**  
+> *Developed by [Franz Bettag](https://bett.ag/en/franz-bettag) on Apple Silicon using MLX.*
 
 ![CKA Comparison](logs/cka/cka_per_head_side_by_side.png)
-*Figure 1: Mechanistic Interpretability Analysis. **Left:** WikiText-2 induces head-selective collapse (specialization) in mid-layers. **Right:** TinyStories maintains uniform high alignment. This proves the "psychedelic" connections adapt dynamically to data complexity.*
+*Figure 1: Mechanistic Interpretability Analysis. **Left:** WikiText-2 induces head-selective collapse (specialization) in mid-layers. **Right:** TinyStories maintains uniform high alignment. These exploratory representation comparisons do not establish a biological mechanism, improved safety or generalization beyond the evaluated runs.*
 
 ---
 
+## Evidence limits
+
+This repository preserves experiments conducted October–December 2025. Results below are author-reported exploratory observations, not peer-reviewed or independently replicated claims. An 8.8% result is not a general accuracy, speed, safety or production-efficiency improvement. Reproduction requires matching the metric, baseline, data split, training budget and random seeds in the experiment artifacts. No such independent reproduction is claimed here.
+
 ## 🚀 Executive Summary
 
-This project implements **"Psychedelic Attention"**—a novel skip-layer mechanism inspired by psilocybin's effect on functional brain connectivity. By enabling non-hierarchical, learnable pathways between distant layers, we achieve significant performance gains without retraining the base model.
+This project implements **"Psychedelic Attention"**—an experimental skip-layer mechanism using a biological metaphor. By enabling non-hierarchical, learnable pathways between distant layers, the experiments train added pathways while freezing the base model. Any gains are specific to the recorded setup and require independent reproduction.
 
 **Key Achievements:**
-- **+8.8% Performance Boost:** On WikiText-2 using a frozen SmolLM2-135M baseline.
-- **Novel Architecture:** Developed the **"Multi-Tap Skip Kernel"** which autonomously learns to blend multiple skip distances ($d=3,4,5$) based on layer depth.
+- **Historical experiment report (not independently reproduced):** On WikiText-2 using a frozen SmolLM2-135M baseline.
+- **Experimental architecture:** Developed the **"Multi-Tap Skip Kernel"** which autonomously learns to blend multiple skip distances ($d=3,4,5$) based on layer depth.
 - **Engineering Efficiency:** Implemented **Manual Gradient Checkpointing** in MLX to enable training complex kernels on consumer hardware (M4 Pro).
-- **Interpretability:** Proved mechanistic distinctiveness via **CKA (Centered Kernel Alignment)** and **SVCCA**, revealing a "Novelty Window" where the model diverges from its baseline to process complex dependencies.
+- **Interpretability:** Explored representation differences via **CKA (Centered Kernel Alignment)** and **SVCCA**, revealing a "Novelty Window" where the model diverges from its baseline to process complex dependencies.
 
 ---
 
@@ -59,7 +63,7 @@ def forward(self, x, layer_idx, buffer):
 ## 🔬 Research Findings
 
 ### A. The "Therapeutic Window"
-I discovered that the biological metaphor holds true computationally.
+The following labels are informal names for an alpha sweep. They are not evidence about psilocybin, brain function or clinical effects.
 - **$\alpha < 0.5$:** Sub-therapeutic. The signal is too weak, leading to instability.
 - **$\alpha \approx 0.65$:** Optimal. Consistent +8.8% gain with minimal variance.
 - **$\alpha > 0.7$:** Over-saturation. Diminishing returns and higher variance.
@@ -72,9 +76,9 @@ When given access to multiple skip distances ($d=3,4,5$), the model **self-organ
 
 ### C. Mechanistic Interpretability
 I used **Centered Kernel Alignment (CKA)** to peer inside the "black box":
-- **Safety:** Early layers ($L_0 - L_8$) remain 99% aligned with the frozen baseline, preserving basic syntax and safety capabilities.
+- **Early-layer alignment:** The recorded CKA comparison reports high alignment with the frozen baseline. CKA does not measure or establish preservation of safety capabilities.
 - **Novelty:** Layers $L_9 - L_{27}$ diverge significantly, creating a "psychedelic workspace" where the new connections modify the representation.
-- **Reconvergence:** The final layers re-align, ensuring the output remains compatible with the pre-trained language head.
+- **Reconvergence:** The final layers re-align, suggesting representation alignment remains compatible with the pre-trained language head.
 
 ---
 
